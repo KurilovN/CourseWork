@@ -1,0 +1,56 @@
+﻿@model IEnumerable<CourseWork.Models.MarkWaterMeter>
+@using System.Data.Entity;
+@using CourseWork.Models;
+@{
+    ViewBag.Title = "Типы счетчиков";
+}
+
+<h2>Типы</h2>
+
+<p>
+    @Html.ActionLink("Добавить новый", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NameMark)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameMark)
+            </td>
+            <td>
+                @Html.ActionLink("Редактирование", "Edit", new { id = item.MarkId }) |
+                @Html.ActionLink("Удалить", "Delete", new { id = item.MarkId })
+            </td>
+        </tr>
+    }
+
+</table>
+<p>
+    <div>
+        @Html.ActionLink("Назад", "AdminMain", "Main")
+    </div>
+</p>
+@section Profile{
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+            @User.Identity.Name
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Выход из профиля", "Logout", "Account")</li>
+        </ul>
+    </li>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquerymask")
+}
+
+

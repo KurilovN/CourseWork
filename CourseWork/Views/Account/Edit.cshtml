@@ -1,0 +1,53 @@
+﻿@model CourseWork.Models.EditModel
+
+@{
+    ViewBag.Title = "Редактирование";
+}
+
+<h4>Редактирование данных профиля</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        @Html.ValidationSummary(true, "")
+        <div>
+            <p>ФИО: @Html.EditorFor(model => model.Name)</p>
+        </div>
+
+        <div>
+            <div>
+                <input type="submit" value="Сохранить" />
+            </div>
+        </div>
+    </div>
+}
+@section Profile{
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+            @User.Identity.Name
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Информация об аккаунте", "UserMain", "Main")</li>
+            <li>@Html.ActionLink("Редактировать аккаунт", "Edit", "Account")</li>
+            <li>@Html.ActionLink("Удалить аккаунт", "Delete", "Account")</li>
+            <li>@Html.ActionLink("Выход из профиля", "Logout", "Account")</li>
+        </ul>
+    </li>
+}
+
+@section ExtraMenuAction{
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+            Основные действия
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Избранные игроки", "Index", "PrivatePlayers")</li>
+            <li>@Html.ActionLink("Просмотреть часто выбираемых в избранное игроков ", "GeneralIndex", "PrivatePlayers")</li>
+            <li>@Html.ActionLink("Поиск игрока", "Index", "SearchPlayer")</li>
+        </ul>
+    <li />
+}

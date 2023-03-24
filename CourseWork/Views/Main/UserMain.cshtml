@@ -1,0 +1,42 @@
+﻿@model CourseWork.Models.User
+@{
+    ViewBag.Title = "UserInformation";
+}
+
+<h4>Информация об акаунте</h4>
+<div>
+    <p>
+        @Html.DisplayNameFor(model => model.Email) - @Html.DisplayFor(model => model.Email)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model => model.Name) - @Html.DisplayFor(model => model.Name)
+    </p>
+</div>
+@section Profile{
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+            @User.Identity.Name
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Информация об аккаунте", "UserMain", "Main")</li>
+            <li>@Html.ActionLink("Редактировать аккаунт", "Edit", "Account")</li>
+            <li>@Html.ActionLink("Удалить аккаунт", "Delete", "Account")</li>
+            <li>@Html.ActionLink("Выход из профиля", "Logout", "Account")</li>
+        </ul>
+    </li>
+}
+
+@section ExtraMenuAction{
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+            Основные действия
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Передать показания", "FirstMenu", "Transmission")</li>
+            <li>@Html.ActionLink("История передачи показаний", "History", "MainUserActions")</li>
+            <li>@Html.ActionLink("Статистика", "ViewDia", "MainUserActions")</li>
+        </ul>
+    <li />
+}

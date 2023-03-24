@@ -1,0 +1,114 @@
+﻿@model IEnumerable<CourseWork.Models.TransmissionView>
+
+@{
+    var listDate1 = new List<DateTime>();
+    var listPokaz1 = new List<Double>();
+    var listDate2 = new List<DateTime>();
+    var listPokaz2 = new List<Double>();
+    double pred1 = 0;
+    double pred2 = 0;
+    foreach (var item in Model)
+    {
+        if (item.NameType == "Горячая вода")
+        {
+            Double tr = Double.Parse(item.Value);
+            Double value = tr - pred1;
+            listDate1.Add(item.TransmissionDate);
+            listPokaz1.Add(value);
+            pred1 = tr;
+        }
+        if (item.NameType == "Холодная вода")
+        {
+            Double tr = Double.Parse(item.Value);
+            Double value = tr - pred2;
+            listDate2.Add(item.TransmissionDate);
+            listPokaz2.Add(value);
+            pred2 = tr;
+        }
+    }
+    string path = Server.MapPath("~/Uploads/");
+    string name = "hot.jpg";
+    var filePathName = path + name;
+
+    var chartImage = new Chart(1000, 500, theme: ChartTheme.Green);
+    chartImage.AddTitle("Показания горячей воды");
+    chartImage.AddSeries("Default",
+            xValue: listDate1, xField: "TransmissionDate",
+            yValues: listPokaz1, yFields: "Value");
+    chartImage.Save(path: filePathName);
+
+    string path2 = Server.MapPath("~/Uploads/");
+    string name2 = "cold.jpg";
+    var filePathName2 = path2 + name2;
+
+    var chartImage2 = new Chart(1000, 500, theme: ChartTheme.Green);
+    chartImage2.AddTitle("Показания холодной воды");
+    chartImage2.AddSeries("Default",
+            xValue: listDate2, xField: "TransmissionDate",
+            yValues: listPokaz2, yFields: "Value");
+    chartImage2.Save(path: filePathName2);
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chart Example</title>
+</head>
+<body>
+    <h2>Статистика переданных показаний</h2>
+    <img src="/Uploads/hot.jpg" />
+
+    <img src="/Uploads/cold.jpg" />
+</body>
+</html>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+@if (User.Identity.IsAuthenticated)
+{
+    if (User.IsInRole("user"))
+    {
+        @section Profile{
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    @User.Identity.Name
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Информация об аккаунте", "UserMain", "Main")</li>
+                    <li>@Html.ActionLink("Редактировать аккаунт", "Edit", "Account")</li>
+                    <li>@Html.ActionLink("Удалить аккаунт", "Delete", "Account")</li>
+                    <li>@Html.ActionLink("Выход из профиля", "Logout", "Account")</li>
+                </ul>
+            </li>
+        }
+
+        @section ExtraMenuAction{
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    Основные действия
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Передать показания", "FirstMenu", "Transmission")</li>
+                    <li>@Html.ActionLink("История передачи показаний", "History", "MainUserActions")</li>
+                    <li>@Html.ActionLink("Статистика", "ViewDia", "MainUserActions")</li>
+                </ul>
+            <li />
+        }
+    }
+    else
+    {
+        @section Profile{
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    @User.Identity.Name
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Выход из профиля", "Logout", "Account")</li>
+                </ul>
+            </li>
+        }
+    }
+}

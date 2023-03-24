@@ -1,0 +1,67 @@
+﻿@model IEnumerable<CourseWork.Models.Client>
+@using System.Data.Entity;
+@using CourseWork.Models;
+@{
+    ViewBag.Title = "Клиенты";
+}
+
+<h2>Клиенты</h2>
+
+<p>
+    @Html.ActionLink("Добавить нового", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonalAccount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FIO)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.PersonalAccount)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Adress)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FIO)
+    </td>
+    <td>
+        @Html.ActionLink("Редактирование", "Edit", new { PersonalAccount = item.PersonalAccount }) |
+        @Html.ActionLink("Удалить", "Delete", new { PersonalAccount = item.PersonalAccount })
+    </td>
+</tr>
+    }
+
+</table>
+<p>
+    <div>
+        @Html.ActionLink("Назад", "AdminMain", "Main")
+    </div>
+</p>
+@section Profile{
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+            @User.Identity.Name
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Выход из профиля", "Logout", "Account")</li>
+        </ul>
+    </li>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquerymask")
+}
+

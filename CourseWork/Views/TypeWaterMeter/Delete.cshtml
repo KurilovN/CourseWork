@@ -1,0 +1,43 @@
+﻿@model CourseWork.Models.TypesWaterMeters
+
+@{
+    ViewBag.Title = "Удаление";
+}
+
+<h2>Удаление характеристики</h2>
+
+<h3>Вы действительно хотите удалить это?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameType)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> |
+            @Html.ActionLink("Назад", "Index")
+        </div>
+    }
+</div>
+@section Profile{
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+            @User.Identity.Name
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Выход из профиля", "Logout", "Account")</li>
+        </ul>
+    </li>
+}

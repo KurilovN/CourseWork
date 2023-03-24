@@ -1,0 +1,52 @@
+﻿@model CourseWork.Models.RegisterModel
+@{
+    ViewBag.Title = "Регистрация";
+}
+
+<h2>Регистрация</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        @Html.ValidationSummary(false)
+
+        <p>
+            Электронный адрес
+            <div>
+                @Html.EditorFor(model => model.Email)
+            </div>
+        </p>
+
+        <p>
+            ФИО
+            <div>
+                @Html.EditorFor(model => model.Name)
+            </div>
+        </p>
+
+        <p>
+            Пароль
+            <div>
+                @Html.EditorFor(model => model.Password)
+            </div>
+        </p>
+
+        <p>
+            Подтвердить пароль
+            <div>
+                @Html.EditorFor(model => model.PasswordConfirm)
+            </div>
+        </p>
+
+        <p>
+            <div>
+                <input type="submit" value="Зарегистрироваться" />
+            </div>
+        </p>
+        <p>
+            <label> У вас уже есть аккаунт? </label>
+            <button>@Html.ActionLink("Вход в систему", "Login", "Account")</button>
+        </p>
+    </div>
+}

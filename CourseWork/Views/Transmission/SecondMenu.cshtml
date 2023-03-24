@@ -1,0 +1,159 @@
+﻿@model CourseWork.Models.TransmissionView
+@using System.Data.Entity;
+@using CourseWork.Models;
+@{
+    ViewBag.Title = "Передача показаний";
+}
+
+<h2>Передача показаний</h2>
+
+@using (Html.BeginForm("Record", "Transmission", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group" flex-wrap="nowrap">
+            <div class="form-group">
+                @Html.LabelFor(model => model.WaterMeterNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.WaterMeterNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.WaterMeterNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.NameMark, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.NameMark, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NameMark, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.NameType, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.NameType, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NameType, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.PersonalAccount, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.PersonalAccount, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PersonalAccount, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Adress, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.Adress, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Adress, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.FIO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.FIO, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.FIO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control", @StartDate = "0:dd-M-yyyy" } })
+                    @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.TransmissionDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TransmissionDate, new { htmlAttributes = new { @class = "form-control", @StartDate = "0:dd-M-yyyy" } })
+                    @Html.ValidationMessageFor(model => model.TransmissionDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Comment, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Comment, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Value, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Value, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Value, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+        </div>
+        @Html.HiddenFor(model => model.WaterMeterNumber)
+        @Html.HiddenFor(model => model.PersonalAccount)
+        @Html.HiddenFor(model => model.Adress)
+        @Html.HiddenFor(model => model.FIO)
+        @Html.HiddenFor(model => model.NameMark)
+        @Html.HiddenFor(model => model.NameType)
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Передать показание" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+    <img src="/Uploads/kek.jpg" />
+}
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+@if (User.Identity.IsAuthenticated)
+{
+    if (User.IsInRole("user"))
+    {
+        @section Profile{
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    @User.Identity.Name
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Информация об аккаунте", "UserMain", "Main")</li>
+                    <li>@Html.ActionLink("Редактировать аккаунт", "Edit", "Account")</li>
+                    <li>@Html.ActionLink("Удалить аккаунт", "Delete", "Account")</li>
+                    <li>@Html.ActionLink("Выход из профиля", "Logout", "Account")</li>
+                </ul>
+            </li>
+        }
+
+        @section ExtraMenuAction{
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    Основные действия
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Передать показания", "FirstMenu", "Transmission")</li>
+                    <li>@Html.ActionLink("История передачи показаний", "History", "MainUserActions")</li>
+                    <li>@Html.ActionLink("Статистика", "ViewDia", "MainUserActions")</li>
+                </ul>
+            <li />
+        }
+    }
+    else
+    {
+        @section Profile{
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    @User.Identity.Name
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Выход из профиля", "Logout", "Account")</li>
+                </ul>
+            </li>
+        }
+    }
+}

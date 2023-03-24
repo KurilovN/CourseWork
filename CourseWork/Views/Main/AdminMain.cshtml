@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "AdminMain";
+}
+<head>
+    <title>Главная страница администратора</title>
+</head>
+<body>
+    <h2>Работа с таблицами</h2>
+    <ul>
+        <li>@Html.ActionLink("Клиенты", "Index", "Client")</li>
+        <li>@Html.ActionLink("Типы счетчиков", "Index", "TypeWaterMeter")</li>
+        <li>@Html.ActionLink("Марки счетчиков", "Index", "MarkWaterMeter")</li>
+        <li>@Html.ActionLink("Счетчики", "Index", "WaterMeter")</li>
+    </ul>
+    <h2>Переданные показания клиентов</h2>
+    <ul>
+
+        <li>@Html.ActionLink("Показания", "Clients", "TransmittedTestimony")</li>
+    </ul>
+</body>
+<!-- здесь остальное содержание -->
+@section Profile{
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+            @User.Identity.Name
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Выход из профиля", "Logout", "Account")</li>
+        </ul>
+    </li>
+}

@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CourseWork.BundleConfig" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\BundleConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.FilterConfig" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\FilterConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.RouteConfig" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\RouteConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.MvcApplication" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AspNetIdentityApp.Startup" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\Startup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Controllers.AccountController" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAQAACAAAAAAAIAAAEBAAICAAAQAAAAAAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Controllers.ClientController" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAQAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ClientController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Controllers.MainController" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAQAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Controllers\MainController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Controllers.MainUserActionsController" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAQAAAAAAAAAAAAAAQAAAAAAAECAAgAAAA=</HashCode>
+      <FileName>Controllers\MainUserActionsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Controllers.MarkWaterMeterController" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\MarkWaterMeterController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Controllers.TransmissionController" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAACAAAQABUAAAAgAAAABAAAAAAAgAgAAAAABgQhBQ=</HashCode>
+      <FileName>Controllers\TransmissionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Controllers.TransmittedTestimonyController" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAACAAAAAAAAQAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\TransmittedTestimonyController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Controllers.TypeWaterMeterController" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAQAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\TypeWaterMeterController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Controllers.WaterMeterController" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\WaterMeterController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.Client" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Models\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.LogAccount" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\LogAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.LoginModel" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\LoginModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.MarkWaterMeter" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABQACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\MarkWaterMeter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.RegAccount" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RegAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.RegisterModel" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAQAgAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RegisterModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.Transmission" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAEACAAAAAAAAAAAAAAAAAAAAAAIAAgAAAAgAA=</HashCode>
+      <FileName>Models\Transmission.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.TypesWaterMeters" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAggAAAAAAAAAA=</HashCode>
+      <FileName>Models\TypesWaterMeters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.User" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.WaterMeter" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAgIAAAAEAAAAA=</HashCode>
+      <FileName>Models\WaterMeter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.WaterMeterContext" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAECAAAAAAABAAAGAAAAAAgAAAAAA=</HashCode>
+      <FileName>Models\WaterMeterContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.BrightnessContrast" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAIA=</HashCode>
+      <FileName>ModelView\BrightnessContrast.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.CourseUserManager" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\CourseUserManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.EditAccount" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\EditAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.EditModel" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\EditModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.FileModel" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACACAEAAABAAAAAAAAAAAAAAhAAAAAoAAgAEAAgAA=</HashCode>
+      <FileName>ModelView\FileModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.Filter" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAEACAAAAAAAAAAAAAAABAAIAAEIAAgAAAAgAA=</HashCode>
+      <FileName>ModelView\Filter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.TotalRegonize" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\TotalRegonize.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.Models.TransmissionView" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACACAEAAABAAAAAAAAAAAAAAhAAAAAoAAgAEAAgAA=</HashCode>
+      <FileName>ModelView\TransmissionView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IdentityUoWApp.Models.IdentityExtensions" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\IdentityExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
